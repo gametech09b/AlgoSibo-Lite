@@ -17,16 +17,16 @@ void NormalRabbid::MoveForward()
     switch (_direction)
     {
     case Direction::UP:
-        _position->y--;
-        break;
-    case Direction::DOWN:
-        _position->y++;
-        break;
-    case Direction::LEFT:
         _position->x--;
         break;
-    case Direction::RIGHT:
+    case Direction::DOWN:
         _position->x++;
+        break;
+    case Direction::LEFT:
+        _position->y--;
+        break;
+    case Direction::RIGHT:
+        _position->y++;
         break;
     }
 }
@@ -36,16 +36,16 @@ void NormalRabbid::MoveBackward()
     switch (_direction)
     {
     case Direction::UP:
-        _position->y++;
-        break;
-    case Direction::DOWN:
-        _position->y--;
-        break;
-    case Direction::LEFT:
         _position->x++;
         break;
-    case Direction::RIGHT:
+    case Direction::DOWN:
         _position->x--;
+        break;
+    case Direction::LEFT:
+        _position->y++;
+        break;
+    case Direction::RIGHT:
+        _position->y--;
         break;
     }
 }

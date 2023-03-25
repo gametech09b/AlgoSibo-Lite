@@ -17,12 +17,14 @@ public:
     std::string GetName();
     Grid *GetGrid();
     std::vector<Object *> GetObjectVector();
+    Object *GetCurrentControllableObject();
+    void SetCurrentControllableObject(int index);
 
 private:
     std::string name;
 
     Grid *grid;
-    std::vector<Object *> objectVector;
 
+    std::vector<Object *> objectVector;
     Object *currentControllableObject;
 };

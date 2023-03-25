@@ -152,5 +152,6 @@ void DisplayManager::PrintLevel(Level *level)
         std::cout << "|";
         std::cout << "=======";
     }
-    std::cout << "|";
+    std::cout << "|" << std::endl
+              << std::endl;
 }

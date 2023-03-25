@@ -8,5 +8,45 @@ int main()
 
     DisplayManager::PrintLevel(level1);
 
+    level1->SetCurrentControllableObject(0);
+
+    NormalRabbid *normalRabbid = static_cast<NormalRabbid *>(level1->GetCurrentControllableObject());
+
+    normalRabbid->MoveForward();
+    DisplayManager::PrintLevel(level1);
+
+    normalRabbid->MoveForward();
+    DisplayManager::PrintLevel(level1);
+    
+    normalRabbid->MoveForward();
+    DisplayManager::PrintLevel(level1);
+
+    normalRabbid->TurnRight();
+    DisplayManager::PrintLevel(level1);
+
+    normalRabbid->MoveForward();
+    DisplayManager::PrintLevel(level1);
+
+    normalRabbid->TurnLeft();
+    DisplayManager::PrintLevel(level1);
+
+    normalRabbid->MoveForward();
+    DisplayManager::PrintLevel(level1);
+    
+    normalRabbid->MoveForward();
+    DisplayManager::PrintLevel(level1);
+
+    normalRabbid->TurnLeft();
+    DisplayManager::PrintLevel(level1);
+
+    normalRabbid->MoveForward();
+    DisplayManager::PrintLevel(level1);
+
+    normalRabbid->TurnRight();
+    DisplayManager::PrintLevel(level1);
+
+    normalRabbid->MoveForward();
+    DisplayManager::PrintLevel(level1);
+
     return 0;
 }
