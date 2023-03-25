@@ -9,16 +9,14 @@
 #include <string>
 #include <vector>
 
-#define RED "\x1b[47;41m"
-#define GREEN "\x1b[47;42m"
-#define DEFAULT "\x1b[0m"
-
 class Level
 {
 public:
     Level(std::string filePath, std::string name);
 
-    void Print();
+    std::string GetName();
+    Grid *GetGrid();
+    std::vector<Object *> GetObjectVector();
 
 private:
     std::string name;
