@@ -7,16 +7,15 @@
 class Grid
 {
 public:
-    Grid(int width, int height);
+    Grid(std::vector<std::vector<Cell *>> grid);
 
-    void Print();
     Cell *GetCell(Position *position);
 
     int GetWidth();
     int GetHeight();
 
 private:
-    std::vector<std::vector<Cell *>> _grid;
-    int _width;
-    int _height;
+    std::vector<std::vector<Cell *>> grid;
+    int width;
+    int height;
 };

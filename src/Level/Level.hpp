@@ -1,6 +1,8 @@
 #pragma once
 
+#include "../FileSystem/FileHandler.hpp"
 #include "../Grid/Grid.hpp"
+#include "../Grid/Cell/Cell.hpp"
 #include "../Object/Object.hpp"
 #include "../Object/ObjectFactory.hpp"
 #include <iostream>
@@ -14,17 +16,15 @@
 class Level
 {
 public:
-    Level(std::string name);
-
-    void Load(std::string name);
+    Level(std::string filePath, std::string name);
 
     void Print();
 
 private:
     std::string name;
 
-    ObjectFactory *objectFactory;
-
     Grid *grid;
     std::vector<Object *> objectVector;
+
+    Object *currentControllableObject;
 };

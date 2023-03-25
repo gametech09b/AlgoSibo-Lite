@@ -1,41 +1,23 @@
 #include "Grid.hpp"
 
-Grid::Grid(int width, int height)
+Grid::Grid(std::vector<std::vector<Cell *>> grid)
 {
-    _width = width;
-    _height = height;
-
-    _grid.resize(_width);
-    for (int i = 0; i < _width; i++)
-    {
-        _grid[i].resize(_height);
-    }
-
-    for (int i = 0; i < _width; i++)
-    {
-        for (int j = 0; j < _height; j++)
-        {
-            Position *position = new Position{i, j};
-            _grid[i][j] = new Cell(*position, true);
-        }
-    }
-}
-
-void Grid::Print()
-{
+    this->grid = grid;
+    width = grid.size();
+    height = grid[0].size();
 }
 
 Cell *Grid::GetCell(Position *position)
 {
-    return _grid[position->x][position->y];
+    return grid[position->x][position->y];
 }
 
 int Grid::GetWidth()
 {
-    return _width;
+    return width;
 }
 
 int Grid::GetHeight()
 {
-    return _height;
+    return height;
 }

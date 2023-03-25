@@ -1,9 +1,5 @@
 #include "ObjectFactory.hpp"
 
-ObjectFactory::ObjectFactory()
-{
-}
-
 Object *ObjectFactory::CreateObject(std::string type, Position *position, Direction direction)
 {
     if (type == "NormalRabbid")
@@ -14,4 +10,9 @@ Object *ObjectFactory::CreateObject(std::string type, Position *position, Direct
     {
         return nullptr;
     }
+}
+
+void ObjectFactory::DestroyObject(Object *object)
+{
+    delete object;
 }

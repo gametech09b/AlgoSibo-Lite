@@ -1,16 +1,19 @@
 #pragma once
 
+#include <fstream>
+#include <sstream>
 #include <vector>
-#include <string>
 
 class FileHandler
 {
 public:
-    void ReadFile(char *fileName);
-    void WriteFile(char *fileName);
-    void AddLine(char *line);
-    void ClearFile();
+    static std::vector<std::string> ReadFile(std::string filePath);
+    static void WriteFile(std::string filePath);
+    static void AddLine(std::string line);
+    static void ClearFile();
+    static std::vector<std::string> GetFileContent();
+    static std::vector<std::string> SplitLine(std::string line, char delimiter);
 
 private:
-    std::vector<std::string> _fileContent;
+    static std::vector<std::string> fileContent;
 };

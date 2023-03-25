@@ -1,8 +1,8 @@
 #include "Cell.hpp"
 
-Cell::Cell(Position &position, bool isWalkable)
+Cell::Cell(Position *position, bool isWalkable)
 {
-    _position = &position;
+    _position = position;
     _isWalkable = isWalkable;
 }
 

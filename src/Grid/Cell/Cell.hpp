@@ -5,7 +5,7 @@
 class Cell
 {
 public:
-    Cell(Position &position, bool isWalkable);
+    Cell(Position *position, bool isWalkable);
 
     Position &GetPosition();
 

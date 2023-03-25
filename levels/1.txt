@@ -1,5 +1,5 @@
-CO
-0 1
+CO NormalRabbid 0 0 RIGHT
 MAP
-# 1 1 1 0 1 *
+1 1 1 1 0 1 1
 0 0 0 1 1 1 0
+END

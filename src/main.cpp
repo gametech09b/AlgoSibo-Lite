@@ -1,12 +1,11 @@
 #include <iostream>
-// #include "./GameManager/GameManager.hpp"
 #include "./Level/Level.hpp"
 
 int main()
 {
-    Level *level = new Level("Hehe");
+    Level *level1 = new Level("../levels/1.txt", "Level 1");
 
-    level->Print();
+    level1->Print();
 
     return 0;
 }

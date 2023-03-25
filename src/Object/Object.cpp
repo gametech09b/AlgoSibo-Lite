@@ -10,7 +10,7 @@ void Object::SetDirection(Direction &direction)
     _direction = direction;
 }
 
-Position &Object::GetPosition()
+Position Object::GetPosition()
 {
     return *_position;
 }
